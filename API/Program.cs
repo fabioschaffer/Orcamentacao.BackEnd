@@ -1,13 +1,18 @@
-namespace Orcamentacao.BackEnd;
+
+using API.DependencyInjection;
+
+namespace API;
 
 public class Program {
     public static void Main(string[] args) {
-
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddControllers();
 
         builder.Services.AddOpenApi();
+
+        ServiceDI.AddServices(builder.Services);
+        InfraDI.AddRepositories(builder.Services);
 
         var app = builder.Build();
 
@@ -16,6 +21,7 @@ public class Program {
         app.UseHttpsRedirection();
 
         app.UseAuthorization();
+
 
         app.MapControllers();
 

@@ -1,3 +1,6 @@
 <Solution>
-  <Project Path="Orcamentacao.BackEnd/Orcamentacao.BackEnd.csproj" />
+  <Project Path="API/API.csproj" />
+  <Project Path="Domain/Domain.csproj" />
+  <Project Path="Infra/Infra.csproj" Id="661ee236-049d-4ab6-b43c-f25ec106d3cf" />
+  <Project Path="Service/Application.csproj" Id="c783935a-dcda-4aeb-9f0e-bac9495df94f" />
 </Solution>
