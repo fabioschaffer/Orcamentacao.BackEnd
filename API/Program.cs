@@ -4,6 +4,7 @@ using API.DependencyInjection;
 namespace API;
 
 public class Program {
+
     public static void Main(string[] args) {
         var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ public class Program {
 
         ServiceDI.AddServices(builder.Services);
         InfraDI.AddRepositories(builder.Services);
+        InfraDI.AddDataBase(builder.Services,builder.Configuration);
 
         var app = builder.Build();
 
@@ -27,4 +29,5 @@ public class Program {
 
         app.Run();
     }
+
 }

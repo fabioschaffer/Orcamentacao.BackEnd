@@ -6,5 +6,5 @@ using System.Text;
 namespace Application.Interfaces.Repository;
 
 public interface IPecaRepository {
-    void CriarPeca(Peca peca);
+    Task CriarPeca(Peca peca);
 }
